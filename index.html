@@ -556,6 +556,223 @@
   .num-chip.done { background: var(--accent-blue-tint); color: var(--accent-blue-strong); border-color: transparent; }
   .num-chip.current { background: var(--accent-red); color: #fff; border-color: transparent; }
 
+  /* ---------- tab bar ---------- */
+
+  .tabbar {
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 18px 10px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .tab-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--ink-soft);
+    border-radius: 999px;
+    padding: 9px 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .tab-btn.active {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: #fff;
+  }
+
+  .tab-badge {
+    font-variant-numeric: tabular-nums;
+    font-size: 10.5px;
+    font-weight: 700;
+    background: var(--accent-red);
+    color: #fff;
+    border-radius: 999px;
+    padding: 1px 6px;
+  }
+
+  .tab-btn.active .tab-badge { background: rgba(255,255,255,0.35); }
+
+  /* ---------- exam mode ---------- */
+
+  .quiz-card {
+    width: 100%;
+    max-width: 460px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 26px 24px 24px;
+    box-shadow: 0 10px 30px var(--shadow-1), 0 2px 8px var(--shadow-1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .quiz-card .q-text { margin: 0; }
+
+  .exam-input {
+    width: 100%;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 13px 16px;
+    border-radius: 14px;
+    border: 1.5px solid var(--border);
+    background: var(--surface-2);
+    color: var(--ink);
+  }
+
+  .exam-input:disabled {
+    opacity: 0.85;
+  }
+
+  .exam-submit-btn {
+    width: 100%;
+  }
+
+  .exam-result {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: var(--surface-2);
+  }
+
+  .exam-result-badge {
+    font-family: "Noto Serif KR", serif;
+    font-weight: 700;
+    font-size: 17px;
+  }
+
+  .exam-result-badge.is-correct { color: var(--accent-blue-strong); }
+  .exam-result-badge.is-wrong { color: var(--accent-red-strong); }
+
+  .exam-result-answer {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+
+  .exam-result-answer strong {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .exam-override {
+    display: flex;
+    gap: 8px;
+  }
+
+  .exam-override button {
+    flex: 1;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--ink-soft);
+    border-radius: 10px;
+    padding: 8px 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* ---------- review (wrong-note) mode ---------- */
+
+  .review-head {
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4px 20px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .review-head h2 { font-size: 19px; }
+
+  .ghost-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--ink-soft);
+    border-radius: 999px;
+    padding: 7px 14px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .review-empty {
+    max-width: 460px;
+    margin: 60px auto;
+    text-align: center;
+    color: var(--ink-faint);
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 0 20px;
+  }
+
+  .review-list {
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 18px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+  }
+
+  .review-row {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .review-row-head { display: flex; }
+
+  .review-q {
+    font-family: "Noto Serif KR", serif;
+    font-weight: 600;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  .review-a {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--accent-red-strong);
+  }
+
+  .review-user {
+    font-size: 12.5px;
+    color: var(--ink-faint);
+  }
+
+  .review-retry-btn {
+    align-self: flex-start;
+    margin-top: 4px;
+    background: var(--accent-blue-tint);
+    color: var(--accent-blue-strong);
+    border: none;
+    border-radius: 10px;
+    padding: 7px 14px;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
   [hidden] { display: none !important; }
 
   .sr-only {
@@ -585,6 +802,13 @@
   </button>
 </div>
 
+<div class="tabbar">
+  <button class="tab-btn" data-mode="study" type="button">학습</button>
+  <button class="tab-btn" data-mode="exam" type="button">시험</button>
+  <button class="tab-btn" data-mode="review" type="button">오답노트<span class="tab-badge" id="reviewBadge" hidden>0</span></button>
+</div>
+
+<div id="studyView">
 <div class="section-strip">
   <div class="bar-track"><div class="bar-fill" id="secBarFill"></div></div>
   <div style="display:flex; justify-content:space-between; align-items:baseline;">
@@ -630,6 +854,59 @@
     다음
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
   </button>
+</div>
+</div>
+
+<div id="examView" hidden>
+  <div class="section-strip">
+    <div class="bar-track"><div class="bar-fill" id="examSecBarFill"></div></div>
+    <div style="display:flex; justify-content:space-between; align-items:baseline;">
+      <span class="name" id="examSecName">-</span>
+      <span class="label" id="examSecRangeLabel">-</span>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="card-wrap">
+      <div class="quiz-card">
+        <div class="face-eyebrow">
+          <span class="num-badge" id="examNumBadge">1</span>
+          <span class="face-tag">시험</span>
+        </div>
+        <p class="q-text" id="examQText"></p>
+        <input id="examInput" class="exam-input" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="정답을 입력하세요">
+        <div class="exam-result" id="examResult" hidden>
+          <div class="exam-result-badge" id="examResultBadge"></div>
+          <div class="exam-result-answer">정답: <strong id="examCorrectAnswer"></strong></div>
+          <div class="exam-override">
+            <button id="markCorrectBtn" type="button">정답으로 표시</button>
+            <button id="markWrongBtn" type="button">오답으로 표시</button>
+          </div>
+        </div>
+        <button id="examSubmitBtn" class="nav-btn primary exam-submit-btn" type="button">채점하기</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar">
+    <button class="nav-btn" id="examPrevBtn" aria-label="이전 문항">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      이전
+    </button>
+    <button class="nav-btn primary" id="examNextBtn" aria-label="다음 문항">
+      다음
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+</div>
+
+<div id="reviewView" hidden>
+  <div class="review-head">
+    <h2>오답노트</h2>
+    <button id="clearWrongBtn" class="ghost-btn" type="button">전체 삭제</button>
+  </div>
+  <div class="review-empty" id="reviewEmpty" hidden>아직 틀린 문제가 없습니다.<br>시험 모드에서 문제를 풀어보세요.</div>
+  <div class="review-list" id="reviewList"></div>
 </div>
 
 <div class="sheet-backdrop" id="backdrop"></div>
@@ -682,6 +959,28 @@ const SECTIONS = [{"lo":1,"hi":57,"title":"대한민국 개관","sub":"국호 ·
     sectionList: document.getElementById("sectionList"),
     jumpInput: document.getElementById("jumpInput"),
     jumpBtn: document.getElementById("jumpBtn"),
+    tabBtns: Array.prototype.slice.call(document.querySelectorAll(".tab-btn")),
+    studyView: document.getElementById("studyView"),
+    examView: document.getElementById("examView"),
+    reviewView: document.getElementById("reviewView"),
+    reviewBadge: document.getElementById("reviewBadge"),
+    examSecName: document.getElementById("examSecName"),
+    examSecRangeLabel: document.getElementById("examSecRangeLabel"),
+    examSecBarFill: document.getElementById("examSecBarFill"),
+    examNumBadge: document.getElementById("examNumBadge"),
+    examQText: document.getElementById("examQText"),
+    examInput: document.getElementById("examInput"),
+    examResult: document.getElementById("examResult"),
+    examResultBadge: document.getElementById("examResultBadge"),
+    examCorrectAnswer: document.getElementById("examCorrectAnswer"),
+    examSubmitBtn: document.getElementById("examSubmitBtn"),
+    markCorrectBtn: document.getElementById("markCorrectBtn"),
+    markWrongBtn: document.getElementById("markWrongBtn"),
+    examPrevBtn: document.getElementById("examPrevBtn"),
+    examNextBtn: document.getElementById("examNextBtn"),
+    reviewEmpty: document.getElementById("reviewEmpty"),
+    reviewList: document.getElementById("reviewList"),
+    clearWrongBtn: document.getElementById("clearWrongBtn"),
   };
 
   function sectionOf(num) {
@@ -882,6 +1181,218 @@ const SECTIONS = [{"lo":1,"hi":57,"title":"대한민국 개관","sub":"국호 ·
     return null;
   }
 
+  /* ---------- mode tabs (학습 / 시험 / 오답노트) ---------- */
+
+  var MODE_KEY = "gwihwa543-mode";
+  var EXAM_KEY = "gwihwa543-exam-progress";
+  var EXAM_RESULTS_KEY = "gwihwa543-exam-results";
+
+  var mode = "study";
+  var examState = { index: 0, graded: false };
+  var examResults = loadExamResults();
+
+  function loadExamResults() {
+    try {
+      var raw = localStorage.getItem(EXAM_RESULTS_KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
+  }
+
+  function saveExamResults() {
+    try { localStorage.setItem(EXAM_RESULTS_KEY, JSON.stringify(examResults)); } catch (e) {}
+  }
+
+  function wrongNumbers() {
+    return Object.keys(examResults)
+      .filter(function (n) { return examResults[n].status === "wrong"; })
+      .map(Number)
+      .sort(function (a, b) { return a - b; });
+  }
+
+  function updateReviewBadge() {
+    var count = wrongNumbers().length;
+    els.reviewBadge.hidden = count === 0;
+    els.reviewBadge.textContent = count > 99 ? "99+" : String(count);
+  }
+
+  function setMode(newMode) {
+    mode = newMode;
+    els.tabBtns.forEach(function (b) { b.classList.toggle("active", b.dataset.mode === newMode); });
+    els.studyView.hidden = newMode !== "study";
+    els.examView.hidden = newMode !== "exam";
+    els.reviewView.hidden = newMode !== "review";
+    try { localStorage.setItem(MODE_KEY, newMode); } catch (e) {}
+    if (newMode === "exam") renderExam();
+    if (newMode === "review") renderReview();
+  }
+
+  els.tabBtns.forEach(function (b) {
+    b.addEventListener("click", function () { setMode(b.dataset.mode); });
+  });
+
+  /* ---------- exam mode ---------- */
+
+  function normalizeAnswer(s) {
+    return (s || "")
+      .replace(/\s+/g, "")
+      .replace(/[.,!?~·"'`]/g, "")
+      .replace(/(입니다|습니다|합니다|이다)$/, "")
+      .toLowerCase();
+  }
+
+  function checkAnswer(userInput, correctAnswer) {
+    var u = normalizeAnswer(userInput);
+    var c = normalizeAnswer(correctAnswer);
+    if (!u) return false;
+    if (u === c) return true;
+    if (u.length >= 2 && c.indexOf(u) !== -1 && u.length >= c.length * 0.4) return true;
+    if (c.length >= 2 && u.indexOf(c) !== -1) return true;
+    return false;
+  }
+
+  function examClampIndex(i) {
+    return Math.max(0, Math.min(TOTAL - 1, i));
+  }
+
+  function persistExam() {
+    try { localStorage.setItem(EXAM_KEY, JSON.stringify({ index: examState.index })); } catch (e) {}
+  }
+
+  function loadExamLocal() {
+    try {
+      var raw = localStorage.getItem(EXAM_KEY);
+      if (!raw) return 0;
+      var parsed = JSON.parse(raw);
+      return examClampIndex(parsed.index || 0);
+    } catch (e) { return 0; }
+  }
+
+  function examGoTo(index) {
+    examState.index = examClampIndex(index);
+    examState.graded = false;
+    renderExam();
+    persistExam();
+  }
+
+  function renderExam() {
+    var card = QA_DATA[examState.index];
+    els.examNumBadge.textContent = card.n + "번";
+    els.examQText.textContent = card.q;
+    els.examInput.value = "";
+    els.examInput.disabled = false;
+    els.examResult.hidden = true;
+    els.examSubmitBtn.hidden = false;
+
+    var sec = sectionOf(card.n);
+    els.examSecName.textContent = sec.title;
+    els.examSecRangeLabel.textContent = sec.lo + "~" + sec.hi + "번";
+    var secSpanCount = QA_DATA.filter(function (c) { return c.n >= sec.lo && c.n <= sec.hi; }).length;
+    var secDoneCount = QA_DATA.filter(function (c) { return c.n >= sec.lo && c.n <= sec.hi && c._i <= examState.index; }).length;
+    els.examSecBarFill.style.width = (secSpanCount ? (secDoneCount / secSpanCount * 100) : 0) + "%";
+
+    els.examPrevBtn.disabled = examState.index === 0;
+    els.examNextBtn.innerHTML = examState.index === TOTAL - 1
+      ? "완료"
+      : '다음<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>';
+
+    if (!("ontouchstart" in window)) els.examInput.focus();
+  }
+
+  function recordExamResult(n, correct, userInput) {
+    examResults[n] = { status: correct ? "correct" : "wrong", userAnswer: userInput, ts: Date.now() };
+    saveExamResults();
+    updateReviewBadge();
+  }
+
+  function showExamResult(correct, correctAnswer) {
+    els.examResult.hidden = false;
+    els.examResultBadge.textContent = correct ? "✓ 정답입니다" : "✗ 오답입니다";
+    els.examResultBadge.className = "exam-result-badge " + (correct ? "is-correct" : "is-wrong");
+    els.examCorrectAnswer.textContent = correctAnswer;
+    els.examSubmitBtn.hidden = true;
+    els.examInput.disabled = true;
+  }
+
+  function submitExam() {
+    if (examState.graded) return;
+    var card = QA_DATA[examState.index];
+    var userInput = els.examInput.value.trim();
+    if (!userInput) { els.examInput.focus(); return; }
+    examState.graded = true;
+    var correct = checkAnswer(userInput, card.a);
+    recordExamResult(card.n, correct, userInput);
+    showExamResult(correct, card.a);
+  }
+
+  els.examSubmitBtn.addEventListener("click", submitExam);
+  els.examInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      if (!examState.graded) submitExam();
+      else if (examState.index < TOTAL - 1) examGoTo(examState.index + 1);
+    }
+  });
+  els.examPrevBtn.addEventListener("click", function () { examGoTo(examState.index - 1); });
+  els.examNextBtn.addEventListener("click", function () { examGoTo(examState.index + 1); });
+
+  els.markCorrectBtn.addEventListener("click", function () {
+    var card = QA_DATA[examState.index];
+    recordExamResult(card.n, true, els.examInput.value.trim());
+    els.examResultBadge.textContent = "✓ 정답으로 표시함";
+    els.examResultBadge.className = "exam-result-badge is-correct";
+  });
+  els.markWrongBtn.addEventListener("click", function () {
+    var card = QA_DATA[examState.index];
+    recordExamResult(card.n, false, els.examInput.value.trim());
+    els.examResultBadge.textContent = "✗ 오답으로 표시함";
+    els.examResultBadge.className = "exam-result-badge is-wrong";
+  });
+
+  /* ---------- review (오답노트) mode ---------- */
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function renderReview() {
+    var nums = wrongNumbers();
+    els.reviewEmpty.hidden = nums.length > 0;
+    els.reviewList.innerHTML = "";
+    nums.forEach(function (n) {
+      var card = byN[n];
+      if (!card) return;
+      var result = examResults[n];
+      var row = document.createElement("div");
+      row.className = "review-row";
+      row.innerHTML =
+        '<div class="review-row-head"><span class="sec-range">' + n + "번</span></div>" +
+        '<div class="review-q">' + escapeHtml(card.q) + "</div>" +
+        '<div class="review-a">정답: ' + escapeHtml(card.a) + "</div>" +
+        '<div class="review-user">내가 쓴 답: ' + escapeHtml(result.userAnswer || "(미입력)") + "</div>";
+      var retryBtn = document.createElement("button");
+      retryBtn.type = "button";
+      retryBtn.className = "review-retry-btn";
+      retryBtn.textContent = "다시 풀기";
+      retryBtn.addEventListener("click", function () {
+        setMode("exam");
+        examGoTo(card._i);
+      });
+      row.appendChild(retryBtn);
+      els.reviewList.appendChild(row);
+    });
+    updateReviewBadge();
+  }
+
+  els.clearWrongBtn.addEventListener("click", function () {
+    if (!wrongNumbers().length) return;
+    if (!window.confirm("오답노트를 모두 지울까요?")) return;
+    wrongNumbers().forEach(function (n) { delete examResults[n]; });
+    saveExamResults();
+    renderReview();
+  });
+
   function boot(hotData) {
     var startIndex = 0;
     if (hotData && typeof hotData.index === "number") {
@@ -891,6 +1402,13 @@ const SECTIONS = [{"lo":1,"hi":57,"title":"대한민국 개관","sub":"국호 ·
       if (local !== null) startIndex = local;
     }
     goTo(startIndex, false);
+
+    examState.index = loadExamLocal();
+    updateReviewBadge();
+
+    var savedMode = "study";
+    try { savedMode = localStorage.getItem(MODE_KEY) || "study"; } catch (e) {}
+    setMode(savedMode);
   }
 
   if (window.claude && window.claude.hot && window.claude.hot.snapshot) {
