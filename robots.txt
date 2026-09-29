@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kakuembed.github.io/gwihwa-interview-543/sitemap.xml
